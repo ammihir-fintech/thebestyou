@@ -4,3 +4,4 @@ __pycache__/
 backend/instance/*.db
 backend/instance/
 backend/.env
+backend/uploads
