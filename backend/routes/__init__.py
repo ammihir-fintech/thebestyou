@@ -12,7 +12,7 @@ def register_blueprints():
     from .upload import upload_bp  
     from .profile import profile_bp  
 
-    routes_bp.register_blueprint(auth_bp, url_prefix="/auth") # Import individual blueprints from within the routes folder
+    #routes_bp.register_blueprint(auth_bp, url_prefix="/auth") # Import individual blueprints from within the routes folder
     routes_bp.register_blueprint(upload_bp, url_prefix="/upload")
     routes_bp.register_blueprint(profile_bp, url_prefix="/profile")
 

@@ -5,3 +5,5 @@ backend/instance/*.db
 backend/instance/
 backend/.env
 backend/uploads
+
+/bestyou/

@@ -19,7 +19,7 @@ def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @upload_bp.route("/image", methods=["POST"]) # 
-@jwt_required()
+#@jwt_required()
 def upload_photo():
     
     
@@ -38,11 +38,11 @@ def upload_photo():
         file.save(file_path)  # Save the file to the uploads directory
         
         #Get the current user's ID from the JWT token
-        current_user_id = get_jwt_identity()
-        #push the upload details to the UploadedImage table
-        uploaded_image = UploadedImage(user_id=current_user_id)
-        db.session.add(uploaded_image)
-        db.session.commit()
+        # current_user_id = get_jwt_identity()
+        # #push the upload details to the UploadedImage table
+        # uploaded_image = UploadedImage(user_id=current_user_id)
+        # db.session.add(uploaded_image)
+        # db.session.commit()
 
         #Placeholder for image analysis
 
