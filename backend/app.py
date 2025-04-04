@@ -7,7 +7,7 @@ from db_models import db
 #from routes.auth import auth_bp
 from routes import routes_bp
 from flask_cors import CORS
-
+from waitress import serve
 
 import os
 
@@ -45,7 +45,9 @@ if __name__ == '__main__':
 
     if os.getenv('ENVIRONMENT') == 'production':
         port = int(os.getenv('PORT', 5000))
-        app.run(host='0.0.0.0', port=port)
+        #app.run(host='0.0.0.0', port=port)
+        serve(app, host='0.0.0.0', port=port)
     else:
-        app.run(debug=True)  # 
+        #app.run(debug=True)  # 
+        serve(app, host='0.0.0.0', port=5000, debug=True)
     #app.run(debug=True)

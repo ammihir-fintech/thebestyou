@@ -9,6 +9,6 @@ python-dotenv
 flask_cors
 gunicorn
 openai
-
+waitress
 requests
 cryptography
