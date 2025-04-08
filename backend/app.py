@@ -17,7 +17,8 @@ def create_app():
     app = Flask(__name__)
     CORS(app, resources={
         r"/*": {
-            "origins": ["http://localhost:3000",
+            "origins": ["https://thebestyou-demo.vercel.app", # new URL
+                        "http://localhost:3000",
                         "https://bestyou-three.vercel.app"],  # Add your React app's URL
 
             "methods": ["GET", "POST", "OPTIONS"],
