@@ -15,6 +15,10 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Initialize extensions
+    from flask_cors import CORS
+    CORS(app, origins=["https://thebestyou-demo.vercel.app", "http://localhost:3000"], supports_credentials=True)
+
+    # Initialize extensions
     db.init_app(app)
     JWTManager(app)
 
