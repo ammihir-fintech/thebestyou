@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # Set the folder where uploaded files will be saved
 UPLOAD_FOLDER = "uploads/"
-ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif"}
+ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif", "webp"}
 
 
 api_key = os.getenv('API_KEY')
